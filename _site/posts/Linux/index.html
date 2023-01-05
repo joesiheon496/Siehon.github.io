@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siheon Jo">
+<meta name="dcterms.date" content="2023-01-05">
+
+<title>blogfile - Linux란</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blogfile</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/joesiheon496/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Linux란</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Linux</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siheon Jo </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 5, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="linux" class="level1">
+<h1>Linux</h1>
+<section id="리눅스와-타-os의-차이" class="level2">
+<h2 class="anchored" data-anchor-id="리눅스와-타-os의-차이">리눅스와 타 OS의 차이</h2>
+<section id="타-os" class="level3">
+<h3 class="anchored" data-anchor-id="타-os">타 OS</h3>
+<ul>
+<li>윈도우나 Mac OS 등은 개발자가 아닌 end-user들을 대상으로 만든 운영체제</li>
+<li>가능한 어려운 조작 없이 Graphic User Interface (GUI)로 만들어진 화면에서 개발자가 만든 프로그램을 사용
+<ul>
+<li>GUI란 모든 요소들이 그림으로 나타나서 사용자가 마우스로 클릭해서 사용할 수 있음</li>
+</ul></li>
+<li>일반 사용자 입장에서 배우기 쉽고 사용하기 편함</li>
+<li>각종 프로그램들도 GUI 위주로 만듦 ### Linux</li>
+<li>Linux는 CUI로 사용 할 수 있게함</li>
+<li>GUI는 완제품의 느낌이라면 CLI는 조립식 제품이라고 생각할 수있음</li>
+<li>리눅스는 오픈소스라서 다양하게 개조하고 발전 시킬 수 있음</li>
+<li>서버는 특정 OS로 사용하는데 일반 개발자로서는 뭔가를 개발하기위한 진입장벽이 높지만 리눅스는 서버에 깔아서 사용할 수 있다. 대표적으로 안드로이드가 있다.</li>
+</ul>
+</section>
+</section>
+<section id="리눅스의-커널이란" class="level2">
+<h2 class="anchored" data-anchor-id="리눅스의-커널이란">리눅스의 ’커널’이란</h2>
+<p>리눅스의 커널이 곧 리눅스다.</p>
+<p>리눅스가 칼이라면 커널은 칼날이다.</p>
+<p>CPU Memory Device 등을 직접 다루고 관리하는게 커널이다.</p>
+<ul>
+<li>리눅스 종류는 대중적인 대표인 UBUNTU 사용</li>
+</ul>
+</section>
+<section id="리눅스-사용" class="level2">
+<h2 class="anchored" data-anchor-id="리눅스-사용">리눅스 사용</h2>
+<p>리눅스 환경 즉 리눅스가 깔린 기기가 필요 1. 가상머신 소프트웨어 - VirtualBox로 사용 - UBUNTU사이트에 CLI SERVER 다운받아 사용 - VirturalBox에서 다운받은 ios 파일 사용 2. 온라인 IDE/터미널 - Goormide 가입 새컨테이너 생성 Blank 생성해서 브라우저에서 사용 가능 - AWS Cloud9 - Google Compute engine 3. 윈도우 10의 WSL</p>
+</section>
+<section id="리눅스-기본적인-명령어" class="level2">
+<h2 class="anchored" data-anchor-id="리눅스-기본적인-명령어">리눅스 기본적인 명령어</h2>
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 58%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>명령어</th>
+<th>설명</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pwd</td>
+<td>현재 위치한 디렉토리의 절대경로 표시</td>
+<td><code>pwd</code></td>
+</tr>
+<tr class="even">
+<td>ls</td>
+<td>현재 위치한 디렉토리 내 파일/디렉토리 목록을 표시</td>
+<td><code>ls</code></td>
+</tr>
+<tr class="odd">
+<td>cd {경로}</td>
+<td>경로로 이동하는 명령어</td>
+<td><code>cd home/siheon</code></td>
+</tr>
+<tr class="even">
+<td>mkdir {디렉토리명}</td>
+<td>폴더 생성</td>
+<td><code>mkdir sample_file</code></td>
+</tr>
+<tr class="odd">
+<td>vi</td>
+<td></td>
+<td>vi 에디터 실행 :wq로 저장해야 만들어지고 :q를 만들면 종료되고 i를 누르면 내용 입력 가능</td>
+</tr>
+<tr class="even">
+<td>cp {복사할 대상} {붙여넣을 경로 또는 새 파일명}</td>
+<td>파일을 복사 디렉토리를 복사할 시에는 -r을 붙여야함</td>
+<td><code>cp original.txt copied.txt</code> or <code>cp original.txt ../anothorfolder</code></td>
+</tr>
+<tr class="odd">
+<td>mv {옮길 대상} {옮길 위치}</td>
+<td>파일이나 디렉토리를 옮기거나 이름을 변경할때 예약</td>
+<td><code>mv original.txt ../anotherfolder/</code></td>
+</tr>
+<tr class="even">
+<td>rm {삭제할 대상}</td>
+<td>파일이나 디렉토리 삭제 -r을 할시 재귀적으로 살펴보아 내부 내용까지 다 삭제</td>
+<td><code>rm fileTodelete.txt</code> or <code>rm -r folderToDelete</code></td>
+</tr>
+<tr class="odd">
+<td>sudo {명령어}</td>
+<td>관리자 권한으로 실행</td>
+<td><code>sudo apt update</code></td>
+</tr>
+</tbody>
+</table>
+<section id="옵션" class="level3">
+<h3 class="anchored" data-anchor-id="옵션">옵션</h3>
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>명령어</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-a</td>
+<td>숨긴 파일을 포함한 모든 항목 표시</td>
+</tr>
+<tr class="even">
+<td>-d</td>
+<td>디렉토리 정보만 표시</td>
+</tr>
+<tr class="odd">
+<td>-F</td>
+<td>디렉토리는 /, 실행가능 파일은 *,소켓 파일은 =,링크인 경우 <span class="citation" data-cites="를">@를</span> 파일이음 뒤에 표시</td>
+</tr>
+<tr class="even">
+<td>-l</td>
+<td>각 항목의 상세 정보들을 함께 표시</td>
+</tr>
+<tr class="odd">
+<td>-m</td>
+<td>각 항목들을 쉼표로 구분하여 표시</td>
+</tr>
+<tr class="even">
+<td>-r</td>
+<td>항목들을 역순으로 표시</td>
+</tr>
+<tr class="odd">
+<td>-R</td>
+<td>하위 디렉토리의 내용들도 표시</td>
+</tr>
+<tr class="even">
+<td>-s</td>
+<td>kb단위로 표시</td>
+</tr>
+<tr class="odd">
+<td>-t</td>
+<td>최종 수정시간을 기준으로 표시</td>
+</tr>
+<tr class="even">
+<td>-u</td>
+<td>최종 액세스 시간 기준으로 표시</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="vim을-익힐수-있는-사이드" class="level2">
+<h2 class="anchored" data-anchor-id="vim을-익힐수-있는-사이드">Vim을 익힐수 있는 사이드</h2>
+<p><a href="https://vim-adventures.com/">Vim adventure</a> : 게임 형식으로 Vim 학습 <a href="https://www.openvim.com/">OpenVim</a> : 주요 기능들을 쉽게 가이드하는 웹 튜토리얼 <a href="http://www.vimgenius.com/">VimGenius</a> : 퀴즈 형식으로 Vim을 연습</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
