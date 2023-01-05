@@ -1,6 +1,7 @@
 # Quarto 프로젝트 파일
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "blogfile"
