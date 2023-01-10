@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "posts/MLOps 정리/index.html",
+    "href": "posts/MLOps 정리/index.html",
+    "title": "MLOps 춘추 전국 시대 정리",
+    "section": "",
+    "text": "문제 정의\nEDA\nFeature 생성\n모델 학습\n예측 위 프로세스는 자신의 컴퓨터, 서버 등에서 실행 고정된 데이터를 사용해 학습 -> 이런 머신러닝 모델을 웹, 앱 서비스에 적용(Production 환경, Real World)\n\n서버 : Docker 이미지로 인스턴스에 띄우기 또는 AWS Lambda(서버리스) 등을 활용\n또는 API 형태로 만들지 않고 DB에 있는 데이터를 Batch 단위로 처리\n1시간에 한번씩 예측해서 결과를 DB에 저장\nTask Management 도구인 Airflow를 사용\n\n\n\nMLOps = 머신러닝 엔지니어링 + 데이터 엔지니어링 + 인프로\nML + Ops\n머신러닝 모델 개발(ML)과 머신러닝 모델 운영(Ops)에서 사용되는 문제, 반복을 최소화하고 비지니스 가치를 창출하는 것이 목표\n모델링에 집중할 수 있도록 관련된 인프라를 만들고, 자동으로 운영되도록 만드는 일\n예 : API 형태로 서버 만들기, 실험 파라미터와 결과 저장하기, 모델 결과 자동화하기, 데이터 Validation 등\nMLOps의 목표는 빠른 시간 내에 가장 적은 위험을 부담하며 아이디어 단계부터 프로덕션까지 ML 프로젝트를 진행할 수 있도록 기술적 마찰을 줄이는 것\n\n\n\n\n\n\n\n\n\nResearch ML\nProduction ML\n\n\n\n\n데이터\n고정(Static)\n계속 변함(Dynamic - Shifting)\n\n\n중요 요소\n모델 성능(Accuracy, RMSE 등)\n모델 성능, 빠른 Inference 속도, 해석 가능함\n\n\n도전 과제\n더 좋은 성능을 내는 모델, 새로운 구조의 모델\n안정적인 운영, 전체 시스템 구조\n\n\n학습\n데이터가 고정이라 모델구조, 파라미터 기반 재학습\n시간의 흐름에 따라 데이터가 변경되어 재학습\n\n\n목적\n논문 출판\n서비스에서 문제 해결\n\n\n표현\nOffline\nOnline\n\n\n\n\n\n\n\n\n음식 소스(Data / Feature) -> 요리하는 행위 (Train) -> 음식 (Model) ### 식당에서 요리하는 행위(Production) 음식 소스(Data / Feature) -> 요리하는 행위 (Train) -> 음식 (Model) -> 서빙(Batch Serving: 많은 양을 일정 주기로 한꺼번에 서빙(=음식 배달, 택배), Online Serving은 한번에 하나씩 포장해서 배송 동시에 여러 주문이 들어올 경우 확장 간으하도록 준비해야 함)\nServing: Production(Real World) 환경에 사용할 수 있도록 모델을 배포\n대표적인 Serving 방식 1. Batch 단위로 여러 데이터를 한번에 예측하는 방법 - (관련한 라이브러리는 거의 없음 익숙한 라이브러리로 작성하고 스케쥴링 실행) - Airflow, Cronjob 등으로 스케쥴링 작업 - 학습 / 예측을 별도의 작업으로 설정 - 학습: 1주일에 한번 - 예측: 10분, 30분, 1시간에 1번씩 2. API 형태로 요청이 올 때마다 예측하는 방법 Lv 1. Flask, Fast API Lv 2. Lv1 + Docker Lv 3. Lv2 + Kubernetes Lv 4. Serving 프레임워크 사용 - 사용 프레임워크: Kubeflow, BentoML, Seldon Core, Cortex, KFServing, Tensorflow Serving, TorchServe 등\nServing 환경의 의존성: 라이브러리, 파이썬 버전 등\nServing 라이브러리는 점점 간단한 코드만 작성하면, Docker Image를 명령어 하나로 만들 수 있는 기능을 지원 - BentoML"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Siheon jo 블로그",
+    "section": "",
+    "text": "MLOps 춘추 전국 시대 정리\n\n\n\n\n\n\n\nLinux\n\n\n\n\n\n\n\n\n\n\n\nJan 10, 2023\n\n\nSiheon Jo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux란\n\n\n\n\n\n\n\nLinux\n\n\n\n\n\n\n\n\n\n\n\nJan 5, 2023\n\n\nSiheon Jo\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 5, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Linux/index.html",
+    "href": "posts/Linux/index.html",
+    "title": "Linux란",
+    "section": "",
+    "text": "윈도우나 Mac OS 등은 개발자가 아닌 end-user들을 대상으로 만든 운영체제\n가능한 어려운 조작 없이 Graphic User Interface (GUI)로 만들어진 화면에서 개발자가 만든 프로그램을 사용\n\nGUI란 모든 요소들이 그림으로 나타나서 사용자가 마우스로 클릭해서 사용할 수 있음\n\n일반 사용자 입장에서 배우기 쉽고 사용하기 편함\n각종 프로그램들도 GUI 위주로 만듦 ### Linux\nLinux는 CUI로 사용 할 수 있게함\nGUI는 완제품의 느낌이라면 CLI는 조립식 제품이라고 생각할 수있음\n리눅스는 오픈소스라서 다양하게 개조하고 발전 시킬 수 있음\n서버는 특정 OS로 사용하는데 일반 개발자로서는 뭔가를 개발하기위한 진입장벽이 높지만 리눅스는 서버에 깔아서 사용할 수 있다. 대표적으로 안드로이드가 있다.\n\n\n\n\n\n리눅스의 커널이 곧 리눅스다.\n리눅스가 칼이라면 커널은 칼날이다.\nCPU Memory Device 등을 직접 다루고 관리하는게 커널이다.\n\n리눅스 종류는 대중적인 대표인 UBUNTU 사용\n\n\n\n\n리눅스 환경 즉 리눅스가 깔린 기기가 필요 1. 가상머신 소프트웨어 - VirtualBox로 사용 - UBUNTU사이트에 CLI SERVER 다운받아 사용 - VirturalBox에서 다운받은 ios 파일 사용 2. 온라인 IDE/터미널 - Goormide 가입 새컨테이너 생성 Blank 생성해서 브라우저에서 사용 가능 - AWS Cloud9 - Google Compute engine 3. 윈도우 10의 WSL\n\n\n\n\n\n\n\n\n\n\n\n명령어\n설명\n예시\n\n\n\n\npwd\n현재 위치한 디렉토리의 절대경로 표시\npwd\n\n\nls\n현재 위치한 디렉토리 내 파일/디렉토리 목록을 표시\nls\n\n\ncd {경로}\n경로로 이동하는 명령어\ncd home/siheon\n\n\nmkdir {디렉토리명}\n폴더 생성\nmkdir sample_file\n\n\nvi\n\nvi 에디터 실행 :wq로 저장해야 만들어지고 :q를 만들면 종료되고 i를 누르면 내용 입력 가능\n\n\ncp {복사할 대상} {붙여넣을 경로 또는 새 파일명}\n파일을 복사 디렉토리를 복사할 시에는 -r을 붙여야함\ncp original.txt copied.txt or cp original.txt ../anothorfolder\n\n\nmv {옮길 대상} {옮길 위치}\n파일이나 디렉토리를 옮기거나 이름을 변경할때 예약\nmv original.txt ../anotherfolder/\n\n\nrm {삭제할 대상}\n파일이나 디렉토리 삭제 -r을 할시 재귀적으로 살펴보아 내부 내용까지 다 삭제\nrm fileTodelete.txt or rm -r folderToDelete\n\n\nsudo {명령어}\n관리자 권한으로 실행\nsudo apt update\n\n\n\n\n\n\n\n\n\n\n\n\n명령어\n설명\n\n\n\n\n-a\n숨긴 파일을 포함한 모든 항목 표시\n\n\n-d\n디렉토리 정보만 표시\n\n\n-F\n디렉토리는 /, 실행가능 파일은 *,소켓 파일은 =,링크인 경우 @를 파일이음 뒤에 표시\n\n\n-l\n각 항목의 상세 정보들을 함께 표시\n\n\n-m\n각 항목들을 쉼표로 구분하여 표시\n\n\n-r\n항목들을 역순으로 표시\n\n\n-R\n하위 디렉토리의 내용들도 표시\n\n\n-s\nkb단위로 표시\n\n\n-t\n최종 수정시간을 기준으로 표시\n\n\n-u\n최종 액세스 시간 기준으로 표시\n\n\n\n\n\n\n\nVim adventure : 게임 형식으로 Vim 학습 OpenVim : 주요 기능들을 쉽게 가이드하는 웹 튜토리얼 VimGenius : 퀴즈 형식으로 Vim을 연습"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]

@@ -1,0 +1,72 @@
+---
+title: "MLOps 춘추 전국 시대 정리"
+author: "Siheon Jo"
+date: "2023-01-10"
+categories: [Linux]
+---
+# MLOps
+## 머신러닝 프로세스
+1. 문제 정의
+2. EDA
+3. Feature 생성
+4. 모델 학습
+5. 예측
+**위 프로세스는 자신의 컴퓨터, 서버 등에서 실행 고정된 데이터를 사용해 학습**
+-> 이런 머신러닝 모델을 웹, 앱 서비스에 적용(Production 환경, Real World)
+
+서버 : Docker 이미지로 인스턴스에 띄우기 또는 AWS Lambda(서버리스) 등을 활용
+
+또는 API 형태로 만들지 않고 DB에 있는 데이터를 Batch 단위로 처리
+
+1시간에 한번씩 예측해서 결과를 DB에 저장
+
+Task Management 도구인 Airflow를 사용
+
+## MLOps
+MLOps = 머신러닝 엔지니어링 + 데이터 엔지니어링 + 인프로
+
+ML + Ops
+
+**머신러닝 모델 개발(ML)과 머신러닝 모델 운영(Ops)에서 사용되는 문제, 반복을 최소화하고 비지니스 가치를 창출하는 것이 목표**
+
+모델링에 집중할 수 있도록 관련된 인프라를 만들고, 자동으로 운영되도록 만드는 일
+
+예 : API 형태로 서버 만들기, 실험 파라미터와 결과 저장하기, 모델 결과 자동화하기, 데이터 Validation 등
+
+**MLOps의 목표는 빠른 시간 내에 가장 적은 위험을 부담하며 아이디어 단계부터 프로덕션까지 ML 프로젝트를 진행할 수 있도록 기술적 마찰을 줄이는 것**
+
+||Research ML|Production ML|
+|---------|---------------|----------------|
+|데이터|고정(Static)|계속 변함(Dynamic - Shifting)|
+|중요 요소|모델 성능(Accuracy, RMSE 등)|모델 성능, 빠른 Inference 속도, 해석 가능함|
+|도전 과제|더 좋은 성능을 내는 모델, 새로운 구조의 모델|안정적인 운영, 전체 시스템 구조|
+|학습|데이터가 고정이라 모델구조, 파라미터 기반 재학습|시간의 흐름에 따라 데이터가 변경되어 재학습|
+|목적|논문 출판|서비스에서 문제 해결|
+|표현|Offline|Online|
+
+## MLOps Component
+### 집에서 요리하는 행위(Research)
+음식 소스(Data / Feature) -> 요리하는 행위 (Train) -> 음식 (Model)
+### 식당에서 요리하는 행위(Production)
+음식 소스(Data / Feature) -> 요리하는 행위 (Train) -> 음식 (Model) -> 서빙(Batch Serving: 많은 양을 일정 주기로 한꺼번에 서빙(=음식 배달, 택배), Online Serving은 한번에 하나씩 포장해서 배송 동시에 여러 주문이 들어올 경우 확장 간으하도록 준비해야 함)
+
+Serving: Production(Real World) 환경에 사용할 수 있도록 모델을 배포
+
+대표적인 Serving 방식
+1. Batch 단위로 여러 데이터를 한번에 예측하는 방법
+    - (관련한 라이브러리는 거의 없음 익숙한 라이브러리로 작성하고 스케쥴링 실행)
+    - Airflow, Cronjob 등으로 스케쥴링 작업
+        - 학습 / 예측을 별도의 작업으로 설정
+        - 학습: 1주일에 한번
+        - 예측: 10분, 30분, 1시간에 1번씩
+2. API 형태로 요청이 올 때마다 예측하는 방법
+    Lv 1. Flask, Fast API
+    Lv 2. Lv1 + Docker
+    Lv 3. Lv2 + Kubernetes
+    Lv 4. Serving 프레임워크 사용
+        - 사용 프레임워크: Kubeflow, BentoML, Seldon Core, Cortex, KFServing, Tensorflow Serving, TorchServe 등
+
+Serving 환경의 의존성: 라이브러리, 파이썬 버전 등
+
+Serving 라이브러리는 점점 간단한 코드만 작성하면, Docker Image를 명령어 하나로 만들 수 있는 기능을 지원
+    - BentoML

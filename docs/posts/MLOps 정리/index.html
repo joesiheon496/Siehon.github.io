@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siheon Jo">
+<meta name="dcterms.date" content="2023-01-10">
+
+<title>blogfile - MLOps 춘추 전국 시대 정리</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blogfile</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/joesiheon496/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">MLOps 춘추 전국 시대 정리</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Linux</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siheon Jo </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 10, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="mlops" class="level1">
+<h1>MLOps</h1>
+<section id="머신러닝-프로세스" class="level2">
+<h2 class="anchored" data-anchor-id="머신러닝-프로세스">머신러닝 프로세스</h2>
+<ol type="1">
+<li>문제 정의</li>
+<li>EDA</li>
+<li>Feature 생성</li>
+<li>모델 학습</li>
+<li>예측 <strong>위 프로세스는 자신의 컴퓨터, 서버 등에서 실행 고정된 데이터를 사용해 학습</strong> -&gt; 이런 머신러닝 모델을 웹, 앱 서비스에 적용(Production 환경, Real World)</li>
+</ol>
+<p>서버 : Docker 이미지로 인스턴스에 띄우기 또는 AWS Lambda(서버리스) 등을 활용</p>
+<p>또는 API 형태로 만들지 않고 DB에 있는 데이터를 Batch 단위로 처리</p>
+<p>1시간에 한번씩 예측해서 결과를 DB에 저장</p>
+<p>Task Management 도구인 Airflow를 사용</p>
+</section>
+<section id="mlops-1" class="level2">
+<h2 class="anchored" data-anchor-id="mlops-1">MLOps</h2>
+<p>MLOps = 머신러닝 엔지니어링 + 데이터 엔지니어링 + 인프로</p>
+<p>ML + Ops</p>
+<p><strong>머신러닝 모델 개발(ML)과 머신러닝 모델 운영(Ops)에서 사용되는 문제, 반복을 최소화하고 비지니스 가치를 창출하는 것이 목표</strong></p>
+<p>모델링에 집중할 수 있도록 관련된 인프라를 만들고, 자동으로 운영되도록 만드는 일</p>
+<p>예 : API 형태로 서버 만들기, 실험 파라미터와 결과 저장하기, 모델 결과 자동화하기, 데이터 Validation 등</p>
+<p><strong>MLOps의 목표는 빠른 시간 내에 가장 적은 위험을 부담하며 아이디어 단계부터 프로덕션까지 ML 프로젝트를 진행할 수 있도록 기술적 마찰을 줄이는 것</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 37%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Research ML</th>
+<th>Production ML</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>데이터</td>
+<td>고정(Static)</td>
+<td>계속 변함(Dynamic - Shifting)</td>
+</tr>
+<tr class="even">
+<td>중요 요소</td>
+<td>모델 성능(Accuracy, RMSE 등)</td>
+<td>모델 성능, 빠른 Inference 속도, 해석 가능함</td>
+</tr>
+<tr class="odd">
+<td>도전 과제</td>
+<td>더 좋은 성능을 내는 모델, 새로운 구조의 모델</td>
+<td>안정적인 운영, 전체 시스템 구조</td>
+</tr>
+<tr class="even">
+<td>학습</td>
+<td>데이터가 고정이라 모델구조, 파라미터 기반 재학습</td>
+<td>시간의 흐름에 따라 데이터가 변경되어 재학습</td>
+</tr>
+<tr class="odd">
+<td>목적</td>
+<td>논문 출판</td>
+<td>서비스에서 문제 해결</td>
+</tr>
+<tr class="even">
+<td>표현</td>
+<td>Offline</td>
+<td>Online</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mlops-component" class="level2">
+<h2 class="anchored" data-anchor-id="mlops-component">MLOps Component</h2>
+<section id="집에서-요리하는-행위research" class="level3">
+<h3 class="anchored" data-anchor-id="집에서-요리하는-행위research">집에서 요리하는 행위(Research)</h3>
+<p>음식 소스(Data / Feature) -&gt; 요리하는 행위 (Train) -&gt; 음식 (Model) ### 식당에서 요리하는 행위(Production) 음식 소스(Data / Feature) -&gt; 요리하는 행위 (Train) -&gt; 음식 (Model) -&gt; 서빙(Batch Serving: 많은 양을 일정 주기로 한꺼번에 서빙(=음식 배달, 택배), Online Serving은 한번에 하나씩 포장해서 배송 동시에 여러 주문이 들어올 경우 확장 간으하도록 준비해야 함)</p>
+<p>Serving: Production(Real World) 환경에 사용할 수 있도록 모델을 배포</p>
+<p>대표적인 Serving 방식 1. Batch 단위로 여러 데이터를 한번에 예측하는 방법 - (관련한 라이브러리는 거의 없음 익숙한 라이브러리로 작성하고 스케쥴링 실행) - Airflow, Cronjob 등으로 스케쥴링 작업 - 학습 / 예측을 별도의 작업으로 설정 - 학습: 1주일에 한번 - 예측: 10분, 30분, 1시간에 1번씩 2. API 형태로 요청이 올 때마다 예측하는 방법 Lv 1. Flask, Fast API Lv 2. Lv1 + Docker Lv 3. Lv2 + Kubernetes Lv 4. Serving 프레임워크 사용 - 사용 프레임워크: Kubeflow, BentoML, Seldon Core, Cortex, KFServing, Tensorflow Serving, TorchServe 등</p>
+<p>Serving 환경의 의존성: 라이브러리, 파이썬 버전 등</p>
+<p>Serving 라이브러리는 점점 간단한 코드만 작성하면, Docker Image를 명령어 하나로 만들 수 있는 기능을 지원 - BentoML</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
