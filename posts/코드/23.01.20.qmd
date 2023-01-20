@@ -1,0 +1,32 @@
+---
+title: "파이썬을 파이썬 답게"
+author: "Siheon Jo"
+date: "2023-01-20"
+categories: [Python]
+---
+## 몫과 나머지
+
+문제: 숫자 a,b가 주어질 때 a를 b로 나눈 몫과 a를 b로 나눈 나머지를 구하시오
+
+```python
+a,b = map(int,input().strip().split())
+# strip()은 문자열의 공백을 제거하는 코드
+c = a//b
+d = a%b
+print(c, d)
+```
+
+보통 코드를 이런식으로 작성하지만 파이썬의 divmod를 사용한다면 두개의 코드를 사용하지 않고 계산이 가능해진다
+
+```python
+a,b = map(int,input().strip().split())
+print(*divmod(a,b))
+# * 은 unpacking으로 인자가 여러개여도 상관치 않고 사용가능하게 해줌
+```
+
+- 가독성이나 팀의 코드에 따라서 //나 %이 쓰는게 더 좋다.
+- 작은 숫자를 다룰 때에는 //와 %가 더 빠르다.
+- 큰 숫자일 경우에는 ```divmod```가 더 빠르다.
+
+## n진법으로 표기된 string을 10진법 숫자로 변환하기
+
